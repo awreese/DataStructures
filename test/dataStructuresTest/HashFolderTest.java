@@ -406,7 +406,7 @@ public class HashFolderTest {
         try {
             hf1 = new HashFolder(1, 2);
             hf1.bulkFold(null);
-            fail("expected IllegalArgumentException");
+            fail("expected NullPointerException");
         } catch (NullPointerException e) {
             // success
         }
