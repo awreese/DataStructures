@@ -390,25 +390,28 @@ public class HashFolderTest {
         // create hash folders and fold both collections in
         hf1 = new HashFolder(1, 2);
         hf2 = new HashFolder(1, 2);
-        
+
         // fold in iterator into hash folder 1
-        hf1.bulkFold(stringList.iterator());
-        
+        hf1.bulkFold(stringList);
+
         // fold in strings into hash folder 2
         for (String s : stringList) {
             hf2.fold(s);
         }
         assertTrue(hf1.getHashValue() == hf2.getHashValue());
-        
+
         /*
-         * Test exception thrown if bulk fold method is passed null iterator
+         * Test exception not thrown if bulk fold method is passed null
+         * collection
          */
         try {
             hf1 = new HashFolder(1, 2);
-            hf1.bulkFold(null);
-            fail("expected NullPointerException");
-        } catch (NullPointerException e) {
+            stringList = null;
+            hf1.bulkFold(stringList);
             // success
+            assertEquals(1, hf1.getHashValue());
+        } catch (NullPointerException e) {
+            fail("unexpected NullPointerException");
         }
 
     }

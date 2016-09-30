@@ -18,6 +18,7 @@
 
 package dataStructures;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.Random;
 
@@ -137,17 +138,15 @@ public final class HashFolder {
     }
 
     /**
-     * Folds an iterator's objects into this hash folder.
+     * Folds a collection's elements into this hash folder.
      * 
-     * @param objItr - iterator of objects to fold into this hash folder
-     * @throws NullPointerException if specified object iterator is null
+     * @param c - the collection of elements to fold into this hash folder
      */
-    public void bulkFold(Iterator<?> objItr) throws NullPointerException {
-        if (objItr == null) {
-            throw new NullPointerException("object iterator is null");
-        }
-        while (objItr.hasNext()) {
-            fold(objItr.next());
+    public void bulkFold(Collection<?> c) {
+        if (c != null) {
+            for (Object o : c) {
+                fold(o);
+            }
         }
     }
 
