@@ -168,7 +168,7 @@ public interface TreeNode<T> extends Collection<TreeNode<T>> {
      * @see java.util.Collection#add(java.lang.Object)
      */
     @Override
-    boolean add(TreeNode<T> e);
+    boolean add(TreeNode<T> t);
 
     /*
      * (non-Javadoc)
