@@ -117,7 +117,7 @@ public interface Tree<T>
     /**
      * Returns the root of this tree.
      * 
-     * @return the root of this tree
+     * @return the root of this tree, null if tree is empty
      */
     TreeNode<T> getRoot();
 
