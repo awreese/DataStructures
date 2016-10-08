@@ -50,6 +50,7 @@ import dataStructures.HashFolder;
  * @param <T> the type of elements stored in this tree node
  * @author Drew Reese
  * @version 1.0
+ * @since JDK1.8
  */
 public abstract class AbstractTreeNode<T> implements TreeNode<T> {
 

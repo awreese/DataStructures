@@ -36,6 +36,7 @@ import java.util.NoSuchElementException;
  * @param <T> - the type of elements returned by the iterator and traverser
  * @author Drew Reese
  * @version 1.0
+ * @since JDK1.8
  */
 public interface Traversable<T> extends Iterable<T> {
 

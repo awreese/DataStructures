@@ -63,6 +63,7 @@ import dataStructures.Traverser;
  * @param <T> the type of elements in this tree
  * @author Drew Reese
  * @version 1.0
+ * @since JDK1.8
  */
 public abstract class AbstractTree<T> extends AbstractCollection<TreeNode<T>>
         implements Tree<T> {

@@ -69,6 +69,7 @@ import dataStructures.Traverser;
  * @param <T> the type of elements in this tree
  * @author Drew Reese
  * @version 1.0
+ * @since JDK1.8
  * @see java.util.Collection
  * @see dataStructures.Traversable
  * @see dataStructures.tree.TreeNode

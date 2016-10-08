@@ -60,6 +60,7 @@ import java.util.Iterator;
  * @param <T> the type of elements in this tree node
  * @author Drew Reese
  * @version 1.0
+ * @since JDK1.8
  * @see java.util.Collection
  */
 public interface TreeNode<T> extends Collection<TreeNode<T>> {

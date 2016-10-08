@@ -51,6 +51,7 @@ import dataStructures.TraversalType;
  * @param <T> the type of elements in this tree node
  * @author Drew Reese
  * @version 1.0
+ * @since JDK1.8
  */
 public interface TreeTraverser<T> extends Traverser<T> {
 

@@ -38,6 +38,7 @@ import java.util.Random;
  * 
  * @author Drew Reese
  * @version 1.0
+ * @since JDK1.8
  */
 public final class HashFolder {
 
