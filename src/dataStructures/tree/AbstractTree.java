@@ -29,6 +29,9 @@ import java.util.NoSuchElementException;
 import dataStructures.TraversalOrder;
 import dataStructures.TraversalType;
 import dataStructures.Traverser;
+import dataStructures.tree.traverser.TreeTraversalOrder;
+import dataStructures.tree.traverser.TreeTraverser;
+import dataStructures.tree.treeNode.TreeNode;
 
 /**
  * This class provides a skeletal implementation of the {@link Tree} interface
@@ -130,8 +133,8 @@ public abstract class AbstractTree<T> extends AbstractCollection<TreeNode<T>>
      * {@link #add(TreeNode, TreeNode)} is overridden.
      * </p>
      * 
-     * @see dataStructures.tree.Tree#insert(dataStructures.tree.TreeNode,
-     *      dataStructures.tree.TreeNode)
+     * @see dataStructures.tree.Tree#insert(dataStructures.tree.treeNode.TreeNode,
+     *      dataStructures.tree.treeNode.TreeNode)
      */
     /*
      * This implementation saves the parent node of the node having a new node
@@ -1071,7 +1074,7 @@ class SubTree<T> extends AbstractTree<T> {
     /**
      * @param t
      * @return
-     * @see dataStructures.tree.AbstractTree#add(dataStructures.tree.TreeNode)
+     * @see dataStructures.tree.AbstractTree#add(dataStructures.tree.treeNode.TreeNode)
      */
     public boolean add(TreeNode<T> t) {
         return add(t.getParent(), t);
@@ -1081,8 +1084,8 @@ class SubTree<T> extends AbstractTree<T> {
      * @param parent
      * @param child
      * @return
-     * @see dataStructures.tree.AbstractTree#add(dataStructures.tree.TreeNode,
-     *      dataStructures.tree.TreeNode)
+     * @see dataStructures.tree.AbstractTree#add(dataStructures.tree.treeNode.TreeNode,
+     *      dataStructures.tree.treeNode.TreeNode)
      */
     public boolean add(TreeNode<T> parent, TreeNode<T> child) {
         checkForComodification();
@@ -1099,8 +1102,8 @@ class SubTree<T> extends AbstractTree<T> {
      * @throws ClassCastException
      * @throws NullPointerException
      * @throws IllegalArgumentException
-     * @see dataStructures.tree.AbstractTree#insert(dataStructures.tree.TreeNode,
-     *      dataStructures.tree.TreeNode)
+     * @see dataStructures.tree.AbstractTree#insert(dataStructures.tree.treeNode.TreeNode,
+     *      dataStructures.tree.treeNode.TreeNode)
      */
     public boolean insert(TreeNode<T> node, TreeNode<T> newNode)
             throws UnsupportedOperationException, ClassCastException,
@@ -1130,7 +1133,7 @@ class SubTree<T> extends AbstractTree<T> {
     /**
      * @param parent
      * @return
-     * @see dataStructures.tree.AbstractTree#subTree(dataStructures.tree.TreeNode)
+     * @see dataStructures.tree.AbstractTree#subTree(dataStructures.tree.treeNode.TreeNode)
      */
     public Tree<T> subTree(TreeNode<T> parent) {
         return new SubTree<T>(this, parent);
@@ -1151,7 +1154,7 @@ class SubTree<T> extends AbstractTree<T> {
     /**
      * @param parent
      * @return
-     * @see dataStructures.tree.AbstractTree#trim(dataStructures.tree.TreeNode)
+     * @see dataStructures.tree.AbstractTree#trim(dataStructures.tree.treeNode.TreeNode)
      */
     public boolean trim(TreeNode<T> parent) {
         checkForComodification();

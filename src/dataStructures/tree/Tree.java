@@ -25,6 +25,7 @@ import java.util.NoSuchElementException;
 import dataStructures.Traversable;
 import dataStructures.TraversalOrder;
 import dataStructures.Traverser;
+import dataStructures.tree.treeNode.TreeNode;
 
 /**
  * <p>
@@ -72,7 +73,7 @@ import dataStructures.Traverser;
  * @since JDK1.8
  * @see java.util.Collection
  * @see dataStructures.Traversable
- * @see dataStructures.tree.TreeNode
+ * @see dataStructures.tree.treeNode.TreeNode
  */
 public interface Tree<T>
         extends Collection<TreeNode<T>>, Traversable<TreeNode<T>> {

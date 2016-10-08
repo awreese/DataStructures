@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package dataStructures.tree;
+package dataStructures.tree.treeNode;
 
 import java.util.Collection;
 import java.util.Iterator;
